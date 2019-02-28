@@ -4,19 +4,124 @@
 
 <head>
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script
+  src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"
+  integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE="
+  crossorigin="anonymous"></script>
+  <script>
+
+    $(document).ready(function(){
+
+    //PRODUCT DESIGN HOVER
+    $(".first").hover(function(){
+      $("#product").stop().animate({backgroundColor:"orange",height:"40vw"},500,'linear');   //onhover
+      $("#product").children().stop().animate({top:"15vw"},500,"linear");
+    },//on unhover
+    function(){
+      $("#product").children().stop().animate({top:"-1vw"});
+      $("#product").stop().animate({backgroundColor:"white",height:"15vw"});
+     }); //outer1
+     //********************************
+
+     //GRAPHIC DESIGN HOVER
+
+     $(".second").hover(function(){
+       $("#graphic").stop().animate({backgroundColor:"#CCFFCC",height:"40vw"},500,'linear');   //onhover
+       $("#graphic").children().stop().animate({top:"15vw"},500,"linear");
+     },//on unhover
+     function(){
+       $("#graphic").children().stop().animate({top:"-1vw"});
+       $("#graphic").stop().animate({backgroundColor:"white",height:"20vw"});
+      }); //outer1
+
+      //********************************
+
+      //ARTWORKS HOVER
+
+      $(".third").hover(function(){
+        $("#artwork").stop().animate({backgroundColor:"#581845",height:"30vw"},500,'linear');   //onhover
+        $("#artwork").children().stop().animate({top:"11vw"},500,"linear");
+      },//on unhover
+      function(){
+        $("#artwork").children().stop().animate({top:"-1vw"});
+        $("#artwork").stop().animate({backgroundColor:"white",height:"10vw"});
+       }); //outer1
+
+       //********************************
+
+       //ABOUT HOVER
+
+       $(".fourth").hover(function(){
+         $("#about").stop().animate({backgroundColor:"orange",height:"20vw"},500,'linear');   //onhover
+         $("#about").children().stop().animate({top:"7vw"},500,"linear");
+       },//on unhover
+       function(){
+         $("#about").children().stop().animate({top:"5vw"});
+         $("#about").stop().animate({backgroundColor:"white",height:"15vw"});
+        }); //outer1
+
+        //********************************
+
+        //CONTACT HOVER
+
+        $(".fifth").hover(function(){
+          $("#contact").stop().animate({backgroundColor:"orange",height:"10vw"},500,'linear');   //onhover
+          $("#contact").children().stop().animate({top:"7vw"},500,"linear");
+        },//on unhover
+        function(){
+          $("#contact").children().stop().animate({top:"6.5vw"});
+          $("#contact").stop().animate({backgroundColor:"white",height:"28vw"});
+         }); //outer1
+
+         //********************************
+
+
+
+
+  }); // document
+
+
+
+
+  </script>
 
   <link href="irmakstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-<ul>
+<ul  style="list-style-type:none;">
+<div id="outer" class="first">
+<div id="product">
 <li> Product Design </li>
-<li> Graphic Design </li>
-<li> Artwork </li>
-<li> About/ CV </li>
-<li> Contact </li>
+</div>
+</div>
 
+<div id="outer" class="second">
+<div id="graphic">
+<li > Graphic Design </li>
+</div>
+</div>
+
+<div id="outer" class="third">
+<div id="artwork">
+<li> Works of Art </li>
+</div>
+</div>
+
+<div id="outer" class="fourth">
+<div id='about'>
+<li> About </li>
+</div>
+</div>
+
+<div id="outer" class="fifth">
+<div id="contact">
+<li> Contact </li>
+</div>
+</div>
 
 </ul>
 
